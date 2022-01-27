@@ -2,3 +2,31 @@
   box-sizing: border-box;
   margin: 0;
 }
+
+.App {
+  padding: 10px;
+  color: #002324;
+  background-color: #f3e3f2;
+}
+
+.line {
+  opacity: 0;
+}
+
+.firstLine {
+  animation-name: xTranslate;
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes xTranslate {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
