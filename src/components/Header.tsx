@@ -1,6 +1,9 @@
 import React from "react";
+import { themes, useTheme } from "../context/ThemeContext";
+import { ThemeButton } from "./ThemeButton";
 
-export const Header = () => {
+export const Header = ({ svgColor }) => {
+  const { setTheme } = useTheme();
   return (
     <header
       style={{
@@ -17,7 +20,7 @@ export const Header = () => {
             y1="10"
             x2="10"
             y2="50"
-            style={{ stroke: "#002324", strokeWidth: "2px" }}
+            style={{ stroke: svgColor, strokeWidth: "2px" }}
           ></line>
           <line
             className="line firstLine"
@@ -25,7 +28,7 @@ export const Header = () => {
             y1="10"
             x2="28"
             y2="10"
-            style={{ stroke: "#002324", strokeWidth: "2px" }}
+            style={{ stroke: svgColor, strokeWidth: "2px" }}
           ></line>
           <line
             className="line firstLine"
@@ -33,7 +36,7 @@ export const Header = () => {
             y1="28"
             x2="28"
             y2="28"
-            style={{ stroke: "#002324", strokeWidth: "2px" }}
+            style={{ stroke: svgColor, strokeWidth: "2px" }}
           ></line>
           <line
             className="line firstLine"
@@ -41,7 +44,7 @@ export const Header = () => {
             y1="10"
             x2="28"
             y2="28"
-            style={{ stroke: "#002324", strokeWidth: "2px" }}
+            style={{ stroke: svgColor, strokeWidth: "2px" }}
           ></line>
           <line
             className="line firstLine"
@@ -49,7 +52,7 @@ export const Header = () => {
             y1="10"
             x2="32"
             y2="50"
-            style={{ stroke: "#002324", strokeWidth: "2px" }}
+            style={{ stroke: svgColor, strokeWidth: "2px" }}
           ></line>
           <line
             className="line firstLine"
@@ -57,7 +60,7 @@ export const Header = () => {
             y1="10"
             x2="50"
             y2="10"
-            style={{ stroke: "#002324", strokeWidth: "2px" }}
+            style={{ stroke: svgColor, strokeWidth: "2px" }}
           ></line>
           <line
             className="line firstLine"
@@ -65,7 +68,7 @@ export const Header = () => {
             y1="28"
             x2="50"
             y2="28"
-            style={{ stroke: "#002324", strokeWidth: "2px" }}
+            style={{ stroke: svgColor, strokeWidth: "2px" }}
           ></line>
         </svg>
       </div>
@@ -73,6 +76,16 @@ export const Header = () => {
         <nav>
           <div>Projects</div>
           <div>Blog</div>
+          <ThemeButton
+            onClick={() =>
+              svgColor === "#ffffff"
+                ? setTheme(themes.light)
+                : setTheme(themes.dark)
+            }
+            style={{ backgroundColor: "inherit", color: "inherit" }}
+          >
+            Change Theme
+          </ThemeButton>
         </nav>
       </div>
     </header>

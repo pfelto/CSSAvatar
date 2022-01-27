@@ -1,14 +1,11 @@
 import React from "react";
-import { Footer } from "./components/Footer";
-import { Header } from "./components/Header";
-import { Main } from "./components/Main";
+import { Layout } from "./components/Layout";
+import { ThemeProvider } from "./context/ThemeContext";
 
 export default function App() {
   return (
-    <div className="App">
-      <Header />
-      <Main />
-      <Footer />
-    </div>
+    <ThemeProvider>
+      <Layout>Main</Layout>
+    </ThemeProvider>
   );
 }

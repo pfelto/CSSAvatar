@@ -4,9 +4,11 @@
 }
 
 .App {
-  padding: 10px;
-  color: #002324;
-  background-color: #f3e3f2;
+  height: 100vh;
+}
+
+Header {
+  margin-bottom: 5px;
 }
 
 .line {
