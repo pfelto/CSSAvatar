@@ -8,11 +8,14 @@ export const Layout = ({ children }) => {
   return (
     <div
       className="App"
-      style={{ backgroundColor: theme.background, color: theme.foreground }}
+      style={{
+        backgroundColor: theme.background,
+        color: theme.foreground,
+      }}
     >
       <Header svgColor={theme.foreground} />
       <main>{children}</main>
-      <Footer />
+      <Footer iconColor={theme.foreground} />
     </div>
   );
 };
