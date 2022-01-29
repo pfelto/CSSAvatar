@@ -15,6 +15,10 @@ nav > ul > * + * {
   padding-left: 2vw;
 }
 
+.iconHolder > * + * {
+  padding-left: 0.5vw;
+}
+
 .line {
   opacity: 0;
 }
